@@ -26,5 +26,17 @@
    		L.geoJson(data).addTo(map);
 });
 
+	// load GeoJSON from an external file
+		$.getJSON("library_culture.geojson",function(data){
+
+    
+    // add GeoJSON layer to the map once the file is loaded
+    	L.geoJson(data,{
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.facname);
+        }
+    	}).addTo(map);
+
+});
 
 		console.log("hello");
