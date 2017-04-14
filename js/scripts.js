@@ -25,3 +25,6 @@
    		// add GeoJSON layer to the map once the file is loaded
    		L.geoJson(data).addTo(map);
 });
+
+
+		console.log("hello");
